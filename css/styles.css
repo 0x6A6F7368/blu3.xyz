@@ -1,0 +1,117 @@
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+  color: #EEEEEE;
+  font-family: 'Jura';font-size: 22px;
+}
+
+.left a:link {
+  color: #EEEEEE;
+}
+
+.left a:visited {
+  color: #EEEEEE;
+}
+
+.left a:hover {
+  color: hotpink;
+}
+
+.left a:active {
+  color: #EEEEEE;
+} 
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #EEEEEE;
+  color: #111;
+  font-family: 'Annie Use Your Telescope';font-size: 22px;
+}
+
+.right a:link {
+  color: #111;
+}
+
+.right a:visited {
+  color: #111;
+}
+
+.right a:hover {
+  color: green;
+}
+
+.right a:active {
+  color: #111;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  /*background-color: #111:*/
+}
+
+.overlayleft {
+  background-color: #111;
+}
+
+.overlayright {
+  background-color: #EEEEEE;
+}
+
+.centered:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #EEEEEE;
+  font-size: small;
+  font-family: 'Cutive Mono';
+}
